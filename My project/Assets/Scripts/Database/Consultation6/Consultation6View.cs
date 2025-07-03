@@ -22,7 +22,7 @@ public class Consultation6View : MonoBehaviour
     {
         foreach (Consultation6DataModel dataModel in consultation6DataModels)
         {
-            text.text += dataModel.clanname + "          " + dataModel.benefit + "          " + dataModel.average_score + "          " + dataModel.amount + "\n";
+            text.text += dataModel.clanname + "              " + dataModel.benefit + "              " + dataModel.average_score +  "\n";
         }
     }
 

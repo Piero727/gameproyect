@@ -16,7 +16,7 @@ public class Consultation8View : MonoBehaviour
     {
         foreach (Consultation8DataModel dataModel in dataModels)
         {
-            text.text += dataModel.amount;
+            text.text += dataModel.amount + "\n";
         }
     }
 }

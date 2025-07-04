@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Other/Menu.unity
     guid: bc4a19ee946e61140bcf85232500d03a
   - enabled: 1
+    path: Assets/Scenes/Other/Credits.unity
+    guid: c8dc090da4419d9488ef2fcfe22599ed
+  - enabled: 1
     path: Assets/Scenes/Rankings/Ranking Sum.unity
     guid: fda952f92c14f2b4a9a3be269a368ccc
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 3.unity
     guid: 51171fe40f00dc34f8880eda99e8c6ff
+  - enabled: 1
+    path: Assets/Scenes/Defeat/Defeat.unity
+    guid: 8a1eedf0184e438429ff3154959c0e4f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

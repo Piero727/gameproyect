@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             if (life <= 0)
             {
                 consultation5View.Post5();
-                SceneManager.LoadScene("Clan Start");
+                SceneManager.LoadScene("Defeat");
 
             }
         }
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("End"))
         {
             consultation5View.Post5();
-            SceneManager.LoadScene("Clan Start");
+            SceneManager.LoadScene("Defeat");
         }
     }
 

@@ -19,6 +19,6 @@ public class StarU : MonoBehaviour
     private void User()
     {
         Info.username = userInput.text;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Clan Start");
     }
 }

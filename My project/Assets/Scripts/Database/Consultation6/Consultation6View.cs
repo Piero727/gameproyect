@@ -7,7 +7,7 @@ public class Consultation6View : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public Button clanButton;
-    public Button level3Button;
+
     private Consultation6Controller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class Consultation6View : MonoBehaviour
         controller = GetComponent<Consultation6Controller>();
         controller.DataCon6(Get6);
         clanButton.onClick.AddListener(SceneClan);
-        level3Button.onClick.AddListener(SceneLevel3);
+
     }
 
     private void Get6(Consultation6DataModel[] consultation6DataModels)
@@ -29,10 +29,5 @@ public class Consultation6View : MonoBehaviour
     private void SceneClan()
     {
         SceneManager.LoadScene("Clan");
-    }
-
-    private void SceneLevel3()
-    {
-        SceneManager.LoadScene("Level 3");
     }
 }

@@ -1,22 +1,25 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MoveFloor : MonoBehaviour
+public class TimerScene : MonoBehaviour
 {
-    private  float speed = 5.0f; 
+    private int timeScene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        timeScene = 1000;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-        if (transform.position.x < -30.7f)
+        timeScene--;
+        if (timeScene <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Menu");
         }
+
     }
 }

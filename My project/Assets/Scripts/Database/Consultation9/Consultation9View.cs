@@ -16,7 +16,7 @@ public class Consultation9View : MonoBehaviour
     {
         foreach (Consultation9DataModel dataModel in dataModels)
         {
-            text.text += dataModel.clanname + "        " + dataModel.benefit + "\n";
+            text.text += dataModel.clanname + "               " + dataModel.benefit + "\n";
         }
     }
 }

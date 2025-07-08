@@ -5,44 +5,65 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speedForce;
+    public int speedForce1;
+    public int speedForce2;
     private Rigidbody rb;
     public bool isGrounded = false;
 
     private int life = 3 + Info.life;
     public TextMeshProUGUI lifeText;
     
-    private int score = 0 + +Info.extrascore;
+    private int score = 0 + Info.extrascore;
     public TextMeshProUGUI scoreText;
 
-    public Button finish;
 
+    public string returnScene;
     public string sceneName;
+    private int reward;
 
     private Consultation1View consultation1View;
-    private Consultation5View consultation5View;
+
+    private TimerController timerController;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         consultation1View = GetComponent<Consultation1View>();
-        consultation5View = GetComponent<Consultation5View>();
+        timerController = GetComponent<TimerController>();
         rb = GetComponent<Rigidbody>();
+
         lifeText.text = "Life: " + life ;
         scoreText.text = "Score: " + score ;
-        finish.onClick.AddListener(SceneFinish);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            rb.AddForce(Vector3.up * speedForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * speedForce1, ForceMode.Impulse);
 
             isGrounded = false;
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.K) && isGrounded == true)
+        {
+            rb.AddForce(Vector3.up * speedForce2, ForceMode.Impulse);
+
+            isGrounded = false;
+        }
+
+        if (timerController.timer <= 0)
+        {
+            Info.score = score;
+            consultation1View.Post1();
+            SceneManager.LoadScene(sceneName);
+        }
+
     }
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
@@ -59,26 +80,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (life <= 0)
             {
-                Info.score = score;
-                consultation1View.Post1();
-                SceneManager.LoadScene(sceneName);
-            }
-
-        }
-
-        if (collision.gameObject.CompareTag("EnemyPlus"))
-        {
-            life--;
-            lifeText.text = "Life: " + life;
-            Destroy(collision.gameObject);
-            if (life <= 0)
-            {
-                consultation5View.Post5();
+                Defeat.sceneName = returnScene;
                 SceneManager.LoadScene("Defeat");
 
             }
-        }
 
+        }
 
     }
 
@@ -87,35 +94,32 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Score"))
         {
             score++;
+            
             scoreText.text = "Score: " + score;
             Destroy(other.gameObject);
+            
         }
 
-        if (other.CompareTag("ScorePlus"))
+        if (other.CompareTag("ScoreHigh"))
         {
-            score+= 10;
+            score += 3;
 
             scoreText.text = "Score: " + score;
             Destroy(other.gameObject);
 
-            if (score >= 50)
+        }
+
+
+        if (other.CompareTag("Timer"))
+        {
+            reward++;
+            Destroy(other.gameObject);
+
+            if (reward == 1)
             {
-                finish.transform.position = new Vector3(922, 944, 0);
+                reward = 0;
+                timerController.timer += 8;
             }
         }
-
-        if (other.CompareTag("End"))
-        {
-            consultation5View.Post5();
-            SceneManager.LoadScene("Defeat");
-        }
-    }
-
-    private void SceneFinish()
-    {
-        Info.score = score;
-        consultation1View.Post1();
-        SceneManager.LoadScene("Clan");
     }
 }
-

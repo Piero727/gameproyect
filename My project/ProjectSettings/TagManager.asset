@@ -8,8 +8,8 @@ TagManager:
   - Enemy
   - Score
   - End
-  - ScorePlus
-  - EnemyPlus
+  - Timer
+  - ScoreHigh
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms;
+
 
 public class Defeat : MonoBehaviour
 {
-    public string sceneName;
+    public static string sceneName;
     private int timeScene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         timeScene = 1000;
+        
     }
 
     // Update is called once per frame

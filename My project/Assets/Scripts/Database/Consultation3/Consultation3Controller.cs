@@ -32,6 +32,7 @@ public class Consultation3Controller : MonoBehaviour
             {
                 Consultation3Data datas = JsonUtility.FromJson<Consultation3Data>(www.downloadHandler.text);
                 callback?.Invoke(datas.data);
+
             }
         }
     }

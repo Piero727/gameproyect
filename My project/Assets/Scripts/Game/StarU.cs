@@ -12,8 +12,6 @@ public class StarU : MonoBehaviour
     void Start()
     {
         buttonU.onClick.AddListener(User);
-        Debug.Log(Info.life);
-        Debug.Log(Info.extrascore);
     }
 
     private void User()

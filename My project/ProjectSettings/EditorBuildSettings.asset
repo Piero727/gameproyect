@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Other/User Start.unity
+    path: Assets/Scenes/Start/User Start.unity
     guid: 3c29ad319c2339a4b901996e66aaef3d
   - enabled: 1
-    path: Assets/Scenes/Other/Clan Start.unity
+    path: Assets/Scenes/Start/Clan Start.unity
     guid: da42865dec957d2408d7000e15826601
   - enabled: 1
     path: Assets/Scenes/Other/Menu.unity
@@ -25,19 +25,16 @@ EditorBuildSettings:
     guid: 5cc20d9dfa24fdf47b404411ffa44fc9
   - enabled: 1
     path: Assets/Scenes/Levels/Level 2.unity
-    guid: 660f86146284f0c49a9e2100cd07af1d
+    guid: e48e5d0d043553245acd8a5930b24b8e
+  - enabled: 1
+    path: Assets/Scenes/Defeat/Defeat.unity
+    guid: 8a1eedf0184e438429ff3154959c0e4f
   - enabled: 1
     path: Assets/Scenes/AVG/AVG.unity
     guid: f24f4b47f82fb414d9f944bcda2e67be
   - enabled: 1
     path: Assets/Scenes/Clan/Clan.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level 3.unity
-    guid: 51171fe40f00dc34f8880eda99e8c6ff
-  - enabled: 1
-    path: Assets/Scenes/Defeat/Defeat.unity
-    guid: 8a1eedf0184e438429ff3154959c0e4f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

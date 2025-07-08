@@ -9,7 +9,7 @@ public class Consultation4View : MonoBehaviour
     public Button likeButton;
     public TMP_InputField userLike;
 
-    private string username;
+
     public string clanname;
     private Consultation4Controller controller;
 
@@ -30,7 +30,7 @@ public class Consultation4View : MonoBehaviour
 
         controller.Data4(userLike.text, Info.clanname,Info.benefit, Post4);
     }
-    // Update is called once per frame
+
     private void Post4(Consultation4DataModel[] dataModels)
     {
         foreach (Consultation4DataModel dataModel in dataModels)

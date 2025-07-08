@@ -26,14 +26,14 @@ public class Consultation7View : MonoBehaviour
             Info.life = 3;
             Info.clanname = clanInput.text;
             controller.Con7(Info.clanname, Info.benefit);
-            SceneManager.LoadScene("User Start");
+            SceneManager.LoadScene("Menu");
         }
         else if (Info.benefit == "extrascore")
         {
             Info.extrascore = 10;
             Info.clanname = clanInput.text;
             controller.Con7(Info.clanname, Info.benefit);
-            SceneManager.LoadScene("User Start");
+            SceneManager.LoadScene("Menu");
         }
 
     }

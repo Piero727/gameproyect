@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 486356350}
   - component: {fileID: 486356349}
   m_Layer: 0
-  m_Name: Con4
+  m_Name: Consul4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1920,7 +1920,7 @@ GameObject:
   - component: {fileID: 2094425055}
   - component: {fileID: 2094425053}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: InputField User Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

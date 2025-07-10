@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             if (reward == 1)
             {
                 reward = 0;
-                timerController.timer += 8;
+                timerController.timer += 10;
             }
         }
     }

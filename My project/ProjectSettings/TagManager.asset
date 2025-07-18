@@ -10,6 +10,8 @@ TagManager:
   - End
   - Timer
   - ScoreHigh
+  - Ball
+  - New enemy
   layers:
   - Default
   - TransparentFX

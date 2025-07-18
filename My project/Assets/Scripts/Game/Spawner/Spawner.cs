@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public List<GameObject> gameObjectList = new List<GameObject>();
+    [SerializeField] private List<GameObject> gameObjectList = new List<GameObject>();
 
-    public float num1;
-    public float num2;
+    [SerializeField] private float num1;
+    [SerializeField] private float num2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -4,10 +4,12 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public Button startButton;
-    public Button rankingSumButton;
-    public Button creditsButton;
-    public Button userButton;
+    [SerializeField] private Button startButton;
+    [SerializeField] private Button rankingSumButton;
+    [SerializeField] private Button creditsButton;
+    [SerializeField] private Button userButton;
+    [SerializeField] private Button gooutButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +17,7 @@ public class Menu : MonoBehaviour
         rankingSumButton.onClick.AddListener(RankingSum); 
         creditsButton.onClick.AddListener(Credits);
         userButton.onClick.AddListener(UserStart);
+        gooutButton.onClick.AddListener(GoOut);
     }
 
     private void StartGame()
@@ -35,5 +38,12 @@ public class Menu : MonoBehaviour
     private void  UserStart()
     {
          SceneManager.LoadScene("User Start");
+    }
+
+    private void GoOut()
+    {
+        
+        Application.Quit();
+        
     }
 }

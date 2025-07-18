@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Consultation3View : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI text;
     private Consultation3Controller controller;
-    public Button scene;
+    [SerializeField] private Button scene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

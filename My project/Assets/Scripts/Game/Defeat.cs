@@ -1,27 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Defeat : MonoBehaviour
 {
     public static string sceneName;
-    private int timeScene;
+
+    [SerializeField] private Button sceneMenu;
+    [SerializeField] private Button sceneReturn;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timeScene = 1000;
-        
+
+        sceneMenu.onClick.AddListener(SceneMenu);
+        sceneReturn.onClick.AddListener(SceneReturn);
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void SceneMenu()
     {
+        SceneManager.LoadScene("Menu");
+    }
 
-        timeScene--;
-        if(timeScene <= 0)
-        {
-            SceneManager.LoadScene(sceneName);
-        }
-
+    private void SceneReturn()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

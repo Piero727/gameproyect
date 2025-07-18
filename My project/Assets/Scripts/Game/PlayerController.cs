@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speedForce1;
-    public int speedForce2;
+    [SerializeField] private int speedForce1;
+    [SerializeField] private int speedForce2;
     private Rigidbody rb;
-    public bool isGrounded = false;
+    [SerializeField] private bool isGrounded = false;
 
     private int life = 3 + Info.life;
-    public TextMeshProUGUI lifeText;
+    [SerializeField] private TextMeshProUGUI lifeText;
     
     private int score = 0 + Info.extrascore;
-    public TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
 
-    public string returnScene;
-    public string sceneName;
+    [SerializeField] private string returnScene;
+    [SerializeField] private string sceneName;
     private int reward;
 
     private Consultation1View consultation1View;
@@ -43,14 +43,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.A) && isGrounded == true)
         {
             rb.AddForce(Vector3.up * speedForce1, ForceMode.Impulse);
 
             isGrounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.K) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.D) && isGrounded == true)
         {
             rb.AddForce(Vector3.up * speedForce2, ForceMode.Impulse);
 

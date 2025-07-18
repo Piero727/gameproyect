@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class StarU : MonoBehaviour
 {
-    public Button buttonU;
+    [SerializeField] private Button buttonU;
 
-    public TMP_InputField userInput;
+    [SerializeField] private TMP_InputField userInput;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +17,15 @@ public class StarU : MonoBehaviour
 
     private void User()
     {
-        Info.username = userInput.text;
-        SceneManager.LoadScene("Clan Start");
+        string trimmedInput = userInput.text.Trim();
+        if (string.IsNullOrEmpty(trimmedInput))
+        {
+            Debug.Log("Miskete");
+        }
+        else
+        {
+            Info.username = trimmedInput;
+            SceneManager.LoadScene("Clan Start");
+        }
     }
 }

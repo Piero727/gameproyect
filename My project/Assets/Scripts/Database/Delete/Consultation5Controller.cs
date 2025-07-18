@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class Consultation5Controller : MonoBehaviour
 {
-    private string url = "http://localhost/consulpro3/consultation5.php";
+    private string url = "http://localhost/consulpro3/delete.php";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Data5(string clannname, string username, string benefit)
     {

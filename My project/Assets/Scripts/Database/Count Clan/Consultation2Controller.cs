@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class Consultation2Controller : MonoBehaviour
 {
     
-    private string url= "http://localhost/consulpro3/consultation2.php"; 
+    private string url= "http://localhost/consulpro3/countclan.php"; 
     public void DataCon2(string clanname, string benefit, Action<Consultation2DataModel[]> callback)
     {
         StartCoroutine(SeletcGet(clanname, benefit, callback));

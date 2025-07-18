@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Consultation5View : MonoBehaviour
 {
     private Consultation5Controller controller;
-    public Button buttonDelete;
+    [SerializeField] private Button buttonDelete;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Consultation6View : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    public Button clanButton;
+    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private Button clanButton;
 
     private Consultation6Controller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

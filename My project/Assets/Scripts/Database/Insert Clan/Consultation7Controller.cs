@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class Consultation7Controller : MonoBehaviour
 {
-    private string url = "http://localhost/consulpro3/consultation7.php";
+    private string url = "http://localhost/consulpro3/insertclan.php";
 
     public void Con7(string clanname, string benefit)
     {

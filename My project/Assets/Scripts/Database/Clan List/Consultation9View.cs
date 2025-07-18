@@ -3,7 +3,7 @@ using TMPro;
 
 public class Consultation9View : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI text;
     private Consultation9Controller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

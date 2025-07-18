@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Consultation4View : MonoBehaviour
 {
-    public TextMeshProUGUI textData;
-    public Button likeButton;
-    public TMP_InputField userLike;
+    [SerializeField] private TextMeshProUGUI textData;
+    [SerializeField] private Button likeButton;
+    [SerializeField] private TMP_InputField userLike;
 
-
-    public string clanname;
     private Consultation4Controller controller;
 
-    public Button sceneButton;
+    [SerializeField] private Button sceneButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,9 +24,20 @@ public class Consultation4View : MonoBehaviour
     private void Like()
     {
 
-        textData.text = "";
+        string trimmedInput = userLike.text.Trim();
+        if (string.IsNullOrEmpty(trimmedInput))
+        {
+            Debug.Log("No results");
+        }
+        else
+        {
+            textData.text = "";
 
-        controller.Data4(userLike.text, Info.clanname,Info.benefit, Post4);
+            controller.Data4(userLike.text, Info.clanname, Info.benefit, Post4);
+        }
+
+
+        
     }
 
     private void Post4(Consultation4DataModel[] dataModels)
@@ -43,4 +52,5 @@ public class Consultation4View : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
 }

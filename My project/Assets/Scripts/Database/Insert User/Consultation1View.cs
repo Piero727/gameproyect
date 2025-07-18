@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Consultation1View : MonoBehaviour
 {
-    public string levelname;
+    [SerializeField] private string levelname;
     private Consultation1Controller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

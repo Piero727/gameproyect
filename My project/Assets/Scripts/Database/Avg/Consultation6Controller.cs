@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Consultation6Controller : MonoBehaviour
 {
-    private string url = "http://localhost/consulpro3/consultation6.php"; 
+    private string url = "http://localhost/consulpro3/avg.php"; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void DataCon6(Action<Consultation6DataModel[]> callback)
     {

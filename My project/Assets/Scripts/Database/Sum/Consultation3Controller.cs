@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Consultation3Controller : MonoBehaviour
 {
-    private string url = "http://localhost/consulpro3/consultation3.php";  
+    private string url = "http://localhost/consulpro3/sum.php";  
 
     public void DataCon3(Action<Consultation3DataModel[]> callback)
     {

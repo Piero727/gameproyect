@@ -6,7 +6,7 @@ public class TimerController : MonoBehaviour
 {
     private float maxTimer = 40f;
     public float timer;
-    public GameObject game;
+    [SerializeField] private GameObject game;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

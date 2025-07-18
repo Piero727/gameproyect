@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Consultation2View : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI text;
 
     private Consultation2Controller controller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

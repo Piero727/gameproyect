@@ -3,7 +3,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     private Enemy enemy1;
-    public int speedE;
+    [SerializeField] private int speedE;
     void Start()
     {
         enemy1 = new Enemy(speedE); 

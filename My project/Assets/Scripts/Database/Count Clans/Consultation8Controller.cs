@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Consultation8Controller : MonoBehaviour
 {
-    private string url = "http://localhost/consulpro3/consultation8.php";
+    private string url = "http://localhost/consulpro3/countclans.php";
     
     public void Consultation8(Action<Consultation8DataModel[]> callback)
     {

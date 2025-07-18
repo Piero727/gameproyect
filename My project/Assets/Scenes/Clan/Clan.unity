@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 486356350}
   - component: {fileID: 486356349}
   m_Layer: 0
-  m_Name: Consul4
+  m_Name: Consul 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,7 +953,6 @@ MonoBehaviour:
   textData: {fileID: 1148017930}
   likeButton: {fileID: 471957785}
   userLike: {fileID: 2094425053}
-  clanname: clan game
   sceneButton: {fileID: 824895662}
 --- !u!114 &486356350
 MonoBehaviour:
